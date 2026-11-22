@@ -1,0 +1,255 @@
+/* RangeTrack approved tactical Shooters interface */
+.rt-shooters-view{color:#eef3ed;padding-bottom:116px}
+.rt-roster-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0 0 14px;border:1px solid #3c4947;border-radius:13px;background:#131b20;overflow:hidden}
+.rt-roster-tabs button{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;border:0;border-radius:0;background:transparent;color:#bdc4c9;font-size:12px;font-weight:800;padding:10px 2px;min-height:72px}
+.rt-roster-tabs button.active{background:linear-gradient(135deg,#263b24,#1a2b24);color:#aceb6a;outline:1px solid #80ad42;outline-offset:-1px;border-radius:12px}
+.rt-roster-tabs svg{height:23px;width:23px}
+.rt-shooters-card{background:linear-gradient(180deg,#192125,#101719);border:1px solid #465156;border-radius:17px;overflow:hidden;box-shadow:0 14px 32px #0004}
+.rt-shooters-card-head{padding:17px 15px;display:flex;align-items:center;justify-content:space-between;gap:8px;background:linear-gradient(180deg,#2b3135,#242b2f);border-bottom:1px solid #424b50}
+.rt-roster-heading{display:flex;align-items:center;gap:9px;min-width:0}
+.rt-roster-heading svg{height:30px;width:30px;flex:none;stroke:#f5f7f5}
+.rt-roster-heading h2{margin:0;font-size:24px;font-weight:900;line-height:1.1;color:#f5f7f5}
+.rt-roster-count{border:1px solid #a5e76f;color:#b7f17f;padding:5px 9px;border-radius:8px;font-size:12px;font-weight:850;white-space:nowrap}
+.rt-shooters-body{padding:13px}
+.rt-shooters-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-bottom:12px}
+.rt-shooters-stats>div{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:78px;gap:2px;border:1px solid #454e52;border-radius:12px;background:linear-gradient(140deg,#2a3134,#1c2529)}
+.rt-shooters-stats strong{font-size:30px;font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums}
+.rt-shooters-stats span{font-size:11px;color:#e2e7e5}
+.rt-stat-assigned strong{color:#a3ed76}.rt-stat-unassigned strong{color:#ffd475}.rt-stat-incomplete strong{color:#ff807f}
+.rt-roster-search{display:flex;align-items:center;gap:9px;padding:0 12px;background:#222a2e;border:1px solid #4e5a60;border-radius:11px;min-height:48px;margin-bottom:11px}
+.rt-roster-search svg{height:21px;width:21px;flex:none;color:#c7d0d3}
+.rt-roster-search input{background:transparent;border:0;min-height:44px;outline:0;padding:8px 0;font-size:16px;font-weight:500;color:#fff}
+.rt-roster-search input:focus{outline:0}
+.rt-roster-table{border:1px solid #485158;border-radius:11px;overflow:hidden;background:#131b1f}
+.rt-roster-columns,.rt-shooter-row{display:grid;grid-template-columns:27px minmax(70px,1fr) 50px 48px;align-items:center;column-gap:5px}
+.rt-roster-columns{background:#2a3135;color:#e2e5e6;font-size:12px;font-weight:800;min-height:42px;padding:0 11px}
+.rt-shooter-row{width:100%;min-height:56px;text-align:left;background:#151d21;color:#f3f4f4;border:0;border-top:1px solid #414b50;border-radius:0;padding:7px 11px;font-size:14px}
+.rt-shooter-row:hover,.rt-shooter-row.selected{background:#26372d}
+.rt-shooter-row:focus-visible{outline:2px solid #a5ee7a;outline-offset:-2px}
+.rt-shooter-row[hidden]{display:none}
+.rt-roster-number{font-weight:800;color:#ebefed}
+.rt-shooter-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:900}
+.rt-lane-value{text-align:center;color:#b4e894}
+.rt-lane-value b{display:inline-block;min-width:33px;border:1px solid #91d663;background:#233729;border-radius:6px;padding:3px 4px;color:#f4f8ee;text-align:center;font-variant-numeric:tabular-nums}
+.rt-ammo-value{text-align:center;font-weight:850;font-variant-numeric:tabular-nums}
+.rt-roster-empty{font-size:13px;color:#b9c4bf;padding:18px}
+.rt-search-status{color:#bbd0bf;font-size:12px;margin:5px 0 0}
+.rt-search-status:empty{display:none}
+.rt-class-settings{margin-top:16px;border-top:1px solid #3b4547;padding-top:10px}
+.rt-class-settings summary{cursor:pointer;color:#b8d99c;font-size:13px;font-weight:800;padding:8px}
+.rt-class-settings-fields{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin:12px 0;width:100%;min-width:0}
+.rt-class-settings-fields label{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;min-width:0;width:100%}
+.rt-class-settings-fields input{display:block;box-sizing:border-box;width:100%;min-width:0;max-width:100%}
+.rt-class-settings .muted{font-size:11px}
+.rt-roster-footer{position:fixed;bottom:0;left:0;right:0;z-index:80;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:9px;padding:9px max(12px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));background:#0e171bfa;border-top:1px solid #4e654e}
+.rt-roster-footer button{min-width:0;min-height:55px;display:flex;align-items:center;justify-content:center;gap:7px;background:#272f33;border:1px solid #576164;border-radius:10px;color:#f0f1f1;font-size:13px;font-weight:800;padding:5px 7px}
+.rt-roster-footer button svg{height:20px;width:20px;flex:none}
+.rt-roster-footer .rt-add-shooter{background:linear-gradient(135deg,#467b2f,#365a28);border-color:#8dd057;color:white}
+.rt-roster-footer button:disabled{opacity:.42}
+.rt-roster-more-menu{position:fixed;z-index:90;bottom:calc(82px + env(safe-area-inset-bottom));right:12px;width:min(280px,calc(100% - 24px));padding:11px;background:#253036;border:1px solid #74936d;border-radius:13px;box-shadow:0 14px 40px #000a}
+.rt-roster-more-menu[hidden]{display:none}
+.rt-roster-more-menu strong{display:block;font-size:12px;color:#bbe89d;margin:2px 5px 8px}
+.rt-roster-more-menu button{display:block;width:100%;text-align:left;min-height:42px;margin:2px 0;background:#172125;border:1px solid #46544b}
+.rt-roster-more-menu .rt-clear-roster{color:#ffb7b4;border-color:#795254}
+.rt-shooters-view .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(min-width:750px){.rt-roster-footer{left:50%;transform:translateX(-50%);max-width:700px;border:1px solid #4e654e;border-bottom:0;border-radius:15px 15px 0 0}.rt-roster-more-menu{right:max(12px,calc((100vw - 700px)/2))}.rt-roster-columns,.rt-shooter-row{grid-template-columns:40px minmax(160px,1fr) 90px 90px}.rt-shooters-stats>div{min-height:95px}}
+@media(max-width:390px){.rt-roster-tabs button{font-size:10px}.rt-roster-heading h2{font-size:21px}.rt-shooters-body{padding:10px}.rt-shooters-stats{gap:4px}.rt-shooters-stats strong{font-size:25px}.rt-shooters-stats span{font-size:9px}.rt-roster-columns,.rt-shooter-row{grid-template-columns:19px minmax(70px,1fr) 40px 42px;gap:4px;padding-left:7px;padding-right:7px;font-size:12px}.rt-roster-footer{gap:5px;padding-left:7px;padding-right:7px}.rt-roster-footer button{font-size:11px;gap:4px;padding:5px 3px}.rt-roster-footer button svg{width:16px;height:16px}}
+@media print{.rt-roster-footer,.rt-roster-more-menu,.rt-roster-tabs{display:none!important}}
+
+/* iOS Safari gives date inputs an intrinsic minimum width unless explicitly constrained. */
+.rt-shooters-card,.rt-shooters-body,.rt-class-settings,.rt-class-settings-fields,.rt-class-settings-fields label{
+ box-sizing:border-box;min-width:0;max-width:100%;
+}
+.rt-class-settings-fields input[type="date"]{
+ display:block;
+ box-sizing:border-box;
+ inline-size:100%;
+ min-inline-size:0;
+ max-inline-size:100%;
+ width:100%;
+ min-width:0;
+ max-width:100%;
+ overflow:hidden;
+ font-size:16px;
+ padding:10px 8px;
+}
+.rt-class-settings-fields input[type="date"]::-webkit-date-and-time-value{
+ min-width:0;
+ text-align:left;
+}
+
+/* iOS date control: use the same flex column and box sizing as the text fields. */
+.rt-class-settings-fields{
+ display:flex;
+ flex-direction:column;
+ align-items:stretch;
+ width:100%;
+ max-width:100%;
+ min-width:0;
+}
+.rt-class-settings-fields>label{
+ display:flex;
+ flex-direction:column;
+ align-items:stretch;
+ width:100%;
+ max-width:100%;
+ min-width:0;
+ overflow:hidden;
+}
+.rt-class-settings-fields>label>input,
+.rt-class-settings-fields>label>input[type="date"]{
+ display:block;
+ flex:0 1 auto;
+ width:100%;
+ min-width:0;
+ max-width:100%;
+ box-sizing:border-box;
+ margin:0;
+}
+.rt-class-settings-fields input[type="date"]::-webkit-datetime-edit{
+ min-width:0;
+ overflow:hidden;
+}
+
+/* Wrap descriptive roster summary labels without overflowing phone-sized tiles. */
+.rt-shooters-stats>div{padding:7px 3px;box-sizing:border-box;min-height:93px}
+.rt-shooters-stats span{display:block;max-width:100%;text-align:center;line-height:1.25;overflow-wrap:break-word;text-wrap:balance}
+@media(max-width:390px){.rt-shooters-stats>div{min-height:96px}.rt-shooters-stats span{font-size:10px}}
+
+/* Match Shooters panels with the Scoring interface's dark olive/charcoal surfaces. */
+.rt-shooters-card{
+ background:#141d23;
+ border-color:#40514c;
+ border-radius:14px;
+ box-shadow:0 10px 28px #0005;
+}
+.rt-shooters-card-head{
+ background:linear-gradient(90deg,#1d2c29,#202a30);
+ border-bottom-color:#46574e;
+}
+.rt-shooters-stats>div{
+ background:linear-gradient(180deg,#202d30,#141e24);
+ border-color:#3b4c4f;
+ box-shadow:0 4px 10px #0003;
+}
+.rt-roster-table{
+ background:#141d23;
+ border-color:#40514c;
+}
+.rt-roster-columns{
+ background:linear-gradient(90deg,#1d2c29,#202a30);
+ border-bottom:1px solid #46574e;
+}
+.rt-shooter-row{
+ background:#182228;
+ border-top-color:#34434b;
+}
+.rt-shooter-row:nth-child(odd){background:#202b30}
+.rt-shooter-row:hover,
+.rt-shooter-row.selected{
+ background:#293a32;
+}
+.rt-shooter-row.selected{
+ box-shadow:inset 3px 0 #8ccf54;
+}
+.rt-class-settings{
+ border-top-color:#46574e;
+}
+
+/* Copy shooter dialog shares the roster's dark modal style. */
+.rt-copy-modal .rt-copy-person{color:#dce8dd;font-size:13px;margin:0 0 14px}
+.rt-copy-modal .rt-copy-person strong{color:#bced9f}
+.rt-copy-modal .rt-copy-note{color:#b4c6ba;background:#1a292b;border:1px solid #41564b;border-radius:8px;font-size:12px;line-height:1.5;padding:12px;margin:12px 0}
+.rt-copy-modal select{display:block;box-sizing:border-box;width:100%;min-width:0;min-height:46px;background:#111e21;color:#f2f7f3;border:1px solid #56685c;border-radius:8px;margin-top:7px;padding:10px;font-size:14px}
+.rt-copy-modal select:focus-visible{outline:2px solid #8ccf54;outline-offset:2px}
+
+/* Multiple shooter selection for copying profiles to another class. */
+.rt-roster-bulkbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 10px;padding:9px 10px;background:#1c292a;border:1px solid #40584b;border-radius:9px}
+.rt-roster-all-label{display:inline-flex;align-items:center;gap:7px;color:#e5f0e7;font-size:12px;font-weight:850;cursor:pointer}
+.rt-roster-all-label input,.rt-roster-checkbox{appearance:auto;accent-color:#8ccf54;width:18px;height:18px;min-width:18px;min-height:18px;margin:0;cursor:pointer}
+#rt-roster-selected-count{margin-left:auto;color:#bad6c0;font-size:11px;font-weight:850}
+#rt-roster-copy-selected{background:#426b35;border:1px solid #80b265;border-radius:8px;color:#f2f8ed;font-weight:850;font-size:11px;min-height:34px;padding:6px 9px}
+#rt-roster-copy-selected:disabled{opacity:.4}
+.rt-roster-columns{grid-template-columns:24px 27px minmax(70px,1fr) 50px 48px}
+.rt-shooter-row{display:grid;grid-template-columns:24px minmax(0,1fr);align-items:center;gap:3px;min-width:0}
+.rt-shooter-row.rt-copy-checked{box-shadow:inset 3px 0 #8ccf54}
+.rt-shooter-row .rt-roster-checkbox{justify-self:center}
+.rt-shooter-pick{display:grid;grid-template-columns:27px minmax(70px,1fr) 50px 48px;align-items:center;column-gap:5px;width:100%;min-width:0;min-height:44px;border:0;background:transparent;color:inherit;text-align:left;padding:0;font-size:inherit;border-radius:0}
+.rt-shooter-pick:hover{background:transparent}
+.rt-shooter-pick:focus-visible{outline:2px solid #a5ee7a;outline-offset:-2px}
+.rt-copy-names{max-height:125px;overflow-y:auto;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.rt-copy-names span{display:inline-block;background:#263a30;color:#e5f1e5;border:1px solid #557058;border-radius:6px;padding:6px 9px;font-size:11px}
+@media(min-width:750px){
+ .rt-roster-columns{grid-template-columns:30px 40px minmax(160px,1fr) 90px 90px}
+ .rt-shooter-pick{grid-template-columns:40px minmax(160px,1fr) 90px 90px}
+ .rt-shooter-row{grid-template-columns:30px minmax(0,1fr)}
+}
+@media(max-width:390px){
+ .rt-roster-columns{grid-template-columns:19px 19px minmax(70px,1fr) 40px 42px;gap:4px}
+ .rt-shooter-row{grid-template-columns:19px minmax(0,1fr);gap:4px}
+ .rt-shooter-pick{grid-template-columns:19px minmax(70px,1fr) 40px 42px;gap:4px}
+ .rt-roster-checkbox{width:16px;height:16px;min-width:16px;min-height:16px}
+ .rt-roster-bulkbar{gap:7px;padding:8px 7px}
+ #rt-roster-selected-count{font-size:10px}
+}
+
+/* Bulk action buttons: copy or remove checked shooters only. */
+.rt-roster-bulk-actions{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+#rt-roster-remove-selected{background:#39282b;border:1px solid #9b6769;border-radius:8px;color:#ffc8c6;font-weight:850;font-size:11px;min-height:34px;padding:6px 9px}
+#rt-roster-remove-selected:hover:not(:disabled){background:#543036}
+#rt-roster-remove-selected:disabled{opacity:.4}
+@media(max-width:600px){
+ .rt-roster-bulk-actions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rt-roster-bulk-actions button{min-width:0;width:100%}
+}
+
+/* Identify the current saved class directly in the Shooters header. */
+.rt-roster-heading-text{min-width:0;display:flex;flex-direction:column;gap:6px}
+.rt-roster-class-name{display:flex;align-items:center;flex-wrap:wrap;gap:5px 8px;min-width:0;line-height:1.3}
+.rt-roster-class-name strong{color:#c2e99f;font-size:12px;font-weight:850;overflow-wrap:anywhere}
+.rt-roster-class-name span{color:#c2d0c5;border-left:1px solid #698268;padding-left:8px;font-size:11px;font-weight:750}
+@media(max-width:390px){.rt-roster-heading-text{gap:4px}.rt-roster-class-name strong{font-size:11px}.rt-roster-class-name span{font-size:10px}}
+
+/* Contextual shooter-selection actions: approved Option 2. */
+.rt-roster-bulkbar{background:transparent;border:0;border-radius:0;padding:2px 3px 9px;gap:8px;margin-bottom:0}
+.rt-roster-select-hint{margin-left:auto;font-size:11px;color:#95a99c;font-weight:650}
+.rt-roster-selection-actions{display:flex;align-items:center;gap:9px;background:#23352b;border:1px solid #608a55;border-radius:11px;min-height:60px;padding:9px 10px;margin-bottom:11px;box-sizing:border-box;min-width:0}
+.rt-roster-selection-actions[hidden]{display:none!important}
+.rt-roster-selected-badge{display:flex;align-items:center;justify-content:center;flex:0 0 36px;min-height:36px;background:#426b35;border:1px solid #6d9958;border-radius:9px;color:#f4f9f0;font-weight:900;font-size:15px;font-variant-numeric:tabular-nums}
+.rt-roster-selected-copy{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.rt-roster-selected-copy strong{color:#f0f6ed;font-size:12px;font-weight:900}
+.rt-roster-selected-copy small{color:#afc4b4;font-size:10px;line-height:1.3}
+.rt-roster-selection-actions button{flex:0 0 39px;width:39px;height:39px;min-height:39px;padding:8px;display:flex;align-items:center;justify-content:center;border-radius:9px}
+.rt-roster-selection-actions button svg{width:19px;height:19px}
+#rt-roster-copy-selected{background:#426b35;border:1px solid #669653;color:#f0f8ed}
+#rt-roster-remove-selected{background:#3b292b;border:1px solid #7c5154;color:#f0b7b5}
+.rt-roster-selection-actions .rt-roster-context-clear{background:transparent;border:0;color:#b5c3b9;flex-basis:27px;width:27px;padding:4px}
+.rt-roster-selection-actions button:hover:not(:disabled){filter:brightness(1.16)}
+.rt-roster-selection-actions button:focus-visible{outline:2px solid #a5ee7a;outline-offset:2px}
+@media(max-width:390px){
+ .rt-roster-selection-actions{gap:5px;padding:8px 7px}
+ .rt-roster-selected-badge{flex-basis:31px;min-height:32px}
+ .rt-roster-selection-actions button{flex-basis:33px;width:33px;height:35px;min-height:35px;padding:7px}
+ .rt-roster-selection-actions .rt-roster-context-clear{flex-basis:22px;width:22px;padding:3px}
+ .rt-roster-select-hint{font-size:10px}
+}
+
+/* Class Settings directly under the three roster statistics. */
+.rt-shooters-view .rt-class-settings{margin:0 0 12px;padding:0;background:#1b2929;border:1px solid #4a6650;border-radius:11px;overflow:hidden}
+.rt-shooters-view .rt-class-settings summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;padding:13px 14px;min-height:54px;color:#eaf4e9;cursor:pointer}
+.rt-shooters-view .rt-class-settings summary::-webkit-details-marker{display:none}
+.rt-shooters-view .rt-class-settings summary::marker{content:''}
+.rt-class-settings-title{display:flex;align-items:center;gap:10px;min-width:0}
+.rt-class-settings-title>span:last-child{display:flex;flex-direction:column;gap:3px}
+.rt-class-settings-title strong{font-size:13px;font-weight:850;color:#eaf4e9;line-height:1.3}
+.rt-class-settings-title small{font-size:11px;color:#a9bbad;font-weight:550;line-height:1.3}
+.rt-class-settings-icon{font-size:19px;line-height:1;color:#a3ed76}
+.rt-class-settings-chevron{width:8px;height:8px;flex:none;border-right:2px solid #a3ed76;border-bottom:2px solid #a3ed76;transform:rotate(45deg);transition:transform .16s}
+.rt-class-settings[open] .rt-class-settings-chevron{transform:rotate(225deg)}
+.rt-class-settings-content{border-top:1px solid #40564b;padding:14px}
+.rt-shooters-view .rt-class-settings-fields{margin:0 0 13px;gap:12px}
+.rt-shooters-view .rt-class-settings-fields>label{font-size:12px;font-weight:750;color:#c8d8ca;gap:7px}
+.rt-shooters-view .rt-class-settings-fields input{background:#101b20;color:#f2f7f3;border:1px solid #52645d;border-radius:8px;min-height:43px;padding:9px 10px;font-size:16px}
+.rt-shooters-view .rt-class-settings-content>button{width:100%;min-height:43px;border:1px solid #638d4d;border-radius:8px;background:#263c2c;color:#d3f0c4;font-weight:800;font-size:12px;padding:9px}
+.rt-shooters-view .rt-class-settings-content>button:hover{background:#355338}
+.rt-shooters-view .rt-class-settings .muted{font-size:11px;line-height:1.4;color:#a9bbad;margin:10px 0 0}
