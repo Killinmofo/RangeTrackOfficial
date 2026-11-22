@@ -1,0 +1,68 @@
+/* Dashboard: RangeTrack tactical UI shared with Scoring, Shooters, Summary. */
+body:has(.rt-dashboard-view){background:radial-gradient(ellipse at 50% -5%,#26362d 0%,#0d1418 52%,#090d11 100%);background-attachment:fixed}
+body:has(.rt-dashboard-view) main{max-width:1420px}
+body:has(.rt-dashboard-view) .brand-header{background:linear-gradient(115deg,#121d20,#182522 55%,#0f171b);border-bottom:1px solid #425247}
+.rt-dashboard-view{color:#ecf4ee;display:flex;flex-direction:column;gap:13px;min-width:0;padding-bottom:32px}
+.rt-dashboard-hero{border:1px solid #415348;border-radius:14px;background:linear-gradient(128deg,#1c2e29,#17232a 58%,#141e22);box-shadow:0 12px 30px #0003;padding:17px;overflow:hidden;position:relative}
+.rt-dashboard-hero:after{content:"";position:absolute;right:-80px;top:-100px;width:260px;height:260px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#8ccf5417,transparent 66%)}
+.rt-dashboard-hero-top,.rt-dashboard-hero-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative;z-index:1}
+.rt-dashboard-live{display:inline-flex;align-items:center;gap:7px;color:#bacac3;font-size:10px;font-weight:900;letter-spacing:.08em}
+.rt-dashboard-live i{height:7px;width:7px;background:#8ccf54;border-radius:50%;box-shadow:0 0 8px #8ccf54}
+.rt-dashboard-hero h2{color:#f5f9f4;font-size:27px;line-height:1.1;letter-spacing:-.04em;margin:15px 0 5px}
+.rt-dashboard-hero h2 span{color:#8ccf54}
+.rt-dashboard-hero p{color:#bac8c5;font-size:12px;line-height:1.5;margin:5px 0 17px;max-width:490px}
+.rt-dashboard-hero-foot{border-top:1px solid #41554c;padding-top:12px;color:#b8cbbf;font-size:10px;font-weight:800;letter-spacing:.05em}
+.rt-dashboard-hero-foot strong{font-size:10px;color:#d2ebc1;background:#253927;border:1px solid #7ba764;border-radius:6px;padding:7px 9px;text-align:right}
+.rt-dashboard-active-overview{display:grid;grid-template-columns:112px minmax(0,1fr);gap:0;overflow:hidden;background:linear-gradient(180deg,#202d30,#141e24);border:1px solid #3b4c4f;border-radius:11px;box-shadow:0 4px 10px #0003}
+.rt-dashboard-active-count{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:14px 8px;border-right:1px solid #3b4c4f;min-width:0}
+.rt-dashboard-active-count strong{color:#a3ed76;font-size:32px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums}
+.rt-dashboard-active-count small{font-size:9px;color:#bdc7c3;font-weight:900;letter-spacing:.035em;text-align:center}
+.rt-dashboard-active-courses{padding:12px 14px;min-width:0;display:flex;flex-direction:column;gap:5px}
+.rt-dashboard-active-courses>span{font-size:9px;color:#bdc7c3;font-weight:900;letter-spacing:.07em}
+.rt-dashboard-active-courses>p{margin:5px 0 0;color:#9eb5a9;font-size:12px}
+.rt-dashboard-active-course{width:100%;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;min-width:0;padding:8px 5px;text-align:left;background:transparent;border:0;border-radius:7px;color:#f2f6f3;cursor:pointer}
+.rt-dashboard-active-course+.rt-dashboard-active-course{border-top:1px solid #34434b}
+.rt-dashboard-active-course:hover,.rt-dashboard-active-course:focus-visible{background:#293a32}
+.rt-dashboard-active-course:focus-visible{outline:2px solid #a5ee7a;outline-offset:-2px}
+.rt-dashboard-active-course strong{color:#f2f6f3;font-size:13px;font-weight:850;overflow-wrap:anywhere;min-width:0}
+.rt-dashboard-active-course small{color:#a7d88e;font-size:10px;font-weight:750}
+.rt-dashboard-active-arrow{margin-left:auto;color:#8ccf54;font-size:22px;line-height:1}
+.rt-dashboard-shell{border:1px solid #40514c;border-radius:14px;overflow:hidden;background:#141d23;box-shadow:0 10px 28px #0005;min-width:0}
+.rt-dashboard-section-heading{background:linear-gradient(90deg,#1d2c29,#202a30);border-bottom:1px solid #46574e;padding:14px}
+.rt-dashboard-section-heading h3{color:#f3f8f2;font-size:19px;line-height:1.25;letter-spacing:-.02em;margin:5px 0 0}
+.rt-dashboard-card{width:100%;min-width:0;display:flex;align-items:center;gap:12px;padding:17px 14px;text-align:left;border:0;border-bottom:1px solid #34434b;border-radius:0;background:#182228;color:#f2f7f3;min-height:76px}
+.rt-dashboard-card:last-child{border-bottom:0}
+.rt-dashboard-card:nth-of-type(even){background:#202b30}
+.rt-dashboard-card:hover,.rt-dashboard-card:focus-visible{background:#293a32}
+.rt-dashboard-card:focus-visible,.rt-dashboard-choices button:focus-visible,.rt-dashboard-start:focus-visible{outline:2px solid #a5ee7a;outline-offset:-2px}
+.rt-dashboard-card-open{background:#293a32;box-shadow:inset 3px 0 #8ccf54}
+.rt-dashboard-card-icon{flex:0 0 38px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:#253c2c;border:1px solid #496749;color:#a6ed7a;font-size:23px;font-weight:700}
+.rt-dashboard-card-copy{flex:1;min-width:0}
+.rt-dashboard-card-copy strong{display:block;font-size:15px;font-weight:900;line-height:1.3}
+.rt-dashboard-card-copy small{display:block;color:#aebeb5;font-size:11px;font-weight:550;line-height:1.4;margin-top:5px}
+.rt-dashboard-card-chevron{font-size:25px;color:#8ccf54;min-width:16px;text-align:center}
+.rt-dashboard-expand{background:linear-gradient(180deg,#19272a,#121e22);border-bottom:1px solid #46574e;padding:14px}
+.rt-dashboard-expand h4{color:#d7e6d8;margin:0 0 12px;font-size:13px;font-weight:850}
+.rt-dashboard-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:9px}
+.rt-dashboard-course-choices{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.rt-dashboard-choices button{min-width:0;min-height:50px;background:#222e31;color:#ebf4ed;border:1px solid #475b56;border-radius:9px;padding:11px;font-size:12px;font-weight:800;overflow-wrap:anywhere}
+.rt-dashboard-choices button:hover{background:#304338}
+.rt-dashboard-choices button.rt-dashboard-selected{outline:none;background:#2e452f;border-color:#8ccf54;color:#c9f3b0;box-shadow:inset 0 0 0 1px #8ccf54}
+.rt-dashboard-selection{border-top:1px solid #40554b;margin-top:15px;padding-top:13px}
+.rt-dashboard-selection p{font-size:12px;line-height:1.5;color:#bdcac2;margin:0 0 11px}
+.rt-dashboard-start{width:100%;min-height:51px;border:1px solid #8ed269;border-radius:9px;background:#5b8b40;color:#fff;font-size:14px;font-weight:900;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.rt-dashboard-start:hover{background:#6d9d50}
+.rt-dashboard-start span{font-size:23px}
+.rt-dashboard-help{color:#bac9c4;font-size:12px;line-height:1.5}
+@media(max-width:600px){
+ .rt-dashboard-active-overview{grid-template-columns:92px minmax(0,1fr)}
+ .rt-dashboard-active-count strong{font-size:28px}
+ .rt-dashboard-active-courses{padding:11px 10px}
+ .rt-dashboard-active-course strong{font-size:12px}
+ .rt-dashboard-hero{padding:13px}.rt-dashboard-hero h2{font-size:24px}
+ .rt-dashboard-card{padding:14px 11px;gap:10px;min-height:72px}
+ .rt-dashboard-card-icon{flex-basis:35px;width:35px;height:35px;font-size:21px}
+ .rt-dashboard-card-copy strong{font-size:14px}
+ .rt-dashboard-card-copy small{font-size:10px}
+}
+@media print{.rt-dashboard-view{display:none!important}}
