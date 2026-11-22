@@ -1,0 +1,79 @@
+/* Course Editor and Weapon Systems: shared tactical RangeTrack surfaces. */
+body:has(.rt-config-view){background:radial-gradient(ellipse at 50% -5%,#26362d 0%,#0d1418 52%,#090d11 100%);background-attachment:fixed}
+body:has(.rt-config-view) main{max-width:1420px}
+body:has(.rt-config-view) .brand-header{background:linear-gradient(115deg,#121d20,#182522 55%,#0f171b);border-bottom:1px solid #425247}
+.rt-config-view{color:#ecf4ee;min-width:0;display:flex;flex-direction:column;gap:13px;padding-bottom:32px}
+.rt-config-hero{position:relative;overflow:hidden;background:linear-gradient(128deg,#1c2e29,#17232a 58%,#141e22);border:1px solid #415348;border-radius:14px;box-shadow:0 12px 30px #0003;padding:17px}
+.rt-config-hero:after{content:"";position:absolute;right:-80px;top:-100px;width:260px;height:260px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#8ccf5417,transparent 66%)}
+.rt-config-hero-top,.rt-config-hero-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;position:relative;z-index:1}
+.rt-config-tag{border:1px solid #7ba764;border-radius:7px;color:#d2ebc1;background:#253927;padding:6px 9px;font-size:10px;font-weight:900;letter-spacing:.06em}
+.rt-config-hero h2{font-size:27px;letter-spacing:-.04em;line-height:1.1;color:#f5f9f4;margin:15px 0 6px}
+.rt-config-hero h2 span{color:#8ccf54}
+.rt-config-hero p{font-size:12px;line-height:1.5;color:#bac8c5;margin:5px 0 17px;max-width:660px}
+.rt-config-hero-foot{border-top:1px solid #41554c;padding-top:11px;font-size:10px;letter-spacing:.05em;font-weight:800;color:#b8cbbf}
+.rt-config-hero-foot strong{color:#c6edaa}
+.rt-config-shell{min-width:0;background:#141d23;border:1px solid #40514c;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px #0005}
+.rt-config-heading{background:linear-gradient(90deg,#1d2c29,#202a30);border-bottom:1px solid #46574e;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.rt-config-heading h3{font-size:19px;letter-spacing:-.02em;color:#f3f8f2;margin:4px 0 0}
+.rt-config-primary,.rt-config-secondary,.rt-config-action,.rt-config-danger,.rt-config-back{min-height:39px;border-radius:8px;padding:8px 12px;font-size:12px;font-weight:850}
+.rt-config-primary{color:#fff;background:#5b8b40;border:1px solid #8ed269}
+.rt-config-primary:hover{background:#6d9d50}
+.rt-config-secondary,.rt-config-action,.rt-config-back{color:#dcecd8;background:#263830;border:1px solid #536f5e}
+.rt-config-secondary:hover,.rt-config-action:hover,.rt-config-back:hover{background:#314b3a}
+.rt-config-danger{background:#352a2d;border:1px solid #87585c;color:#ffb6b8}
+.rt-config-danger:hover{background:#523034}
+.rt-config-view button:focus-visible,.rt-config-view input:focus-visible,.rt-config-view select:focus-visible{outline:2px solid #a5ee7a;outline-offset:2px}
+.rt-config-list{display:flex;flex-direction:column;min-width:0}
+.rt-config-row{display:flex;align-items:center;gap:12px;min-width:0;min-height:74px;padding:13px 14px;background:#182228;border-bottom:1px solid #34434b}
+.rt-config-row:nth-child(even){background:#202b30}
+.rt-config-row:last-child{border-bottom:0}
+.rt-config-row-main{flex:1;min-width:0}
+.rt-config-row-main strong{display:block;color:#f2f7f3;font-size:14px;font-weight:900;overflow-wrap:anywhere}
+.rt-config-row-main small{display:block;margin-top:5px;color:#aac0b3;font-size:11px;line-height:1.45}
+.rt-config-row-actions{display:flex;flex:0 0 auto;gap:6px;align-items:center}
+.rt-config-row-actions button{padding:7px 9px;min-height:35px}
+.rt-config-weapon-icon{width:38px;height:38px;flex:0 0 38px;display:flex;align-items:center;justify-content:center;color:#a6ed7a;background:#253c2c;border:1px solid #496749;border-radius:10px;font-size:24px}
+.rt-config-empty{padding:20px;margin:0;color:#b8c5bd;font-size:13px}
+.rt-config-note{font-size:11px;line-height:1.6;color:#afc4b5;padding:12px 14px;border-top:1px solid #40514c;background:#1b2929}
+.rt-config-content{padding:14px}
+.rt-config-content>p{font-size:12px;color:#b8c8bf;line-height:1.6;margin:0 0 14px}
+.rt-config-content>p:last-child{margin:13px 0 0}
+.rt-config-content label{display:block;color:#d8e6d9;font-size:12px;font-weight:800}
+.rt-config-content input{width:100%;min-width:0;box-sizing:border-box;background:#101b20;border:1px solid #52645d;border-radius:8px;color:#f2f7f3;min-height:45px;margin-top:7px;padding:10px}
+.rt-config-back{align-self:flex-start}
+.rt-config-back:hover{cursor:pointer}
+.rt-config-back:focus-visible{outline:2px solid #a5ee7a}
+.rt-config-backup-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:12px}
+.rt-config-backup-actions>.rt-config-secondary{min-height:45px}
+.rt-config-backup-actions input[type=file]{font-size:11px;min-height:45px;padding:8px}
+.rt-config-add-weapon{margin-top:12px;width:100%;min-height:45px}
+.rt-config-edit-panel{background:#141d23;border:1px solid #40514c;border-radius:14px;box-shadow:0 10px 28px #0005;margin:0;padding:0 14px 15px;min-width:0}
+.rt-config-edit-panel>.row.between:first-child{margin:0 -14px 14px;padding:14px;background:linear-gradient(90deg,#1d2c29,#202a30);border-bottom:1px solid #46574e;border-radius:13px 13px 0 0}
+.rt-config-edit-panel>.row.between:first-child h2{font-size:19px;color:#f3f8f2;margin:0}
+.rt-config-edit-panel>h3{font-size:16px;color:#c9e5b6;margin:15px 0 10px}
+.rt-config-edit-panel>label{display:block;margin-bottom:14px}
+.rt-config-edit-panel label{color:#d8e6d9;font-size:12px;font-weight:700}
+.rt-config-edit-panel input:not([type=checkbox]),.rt-config-edit-panel select{box-sizing:border-box;background:#101b20;border:1px solid #52645d;color:#f2f7f3;border-radius:8px;min-height:43px;width:100%;min-width:0;margin-top:6px}
+.rt-config-edit-panel .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,195px),1fr));gap:11px}
+.rt-config-edit-panel .grid>label{min-width:0}
+.rt-config-edit-panel .grid>label.row{background:#1c2a29;border:1px solid #43564d;border-radius:8px;padding:10px;gap:10px}
+.rt-config-edit-panel .grid>label.row input{flex:0 0 20px}
+.rt-config-edit-panel .muted{color:#afc0b7;font-size:12px;line-height:1.6}
+.rt-config-edit-panel .areaedit{background:#1b282c;border:1px solid #42544e;border-radius:10px;padding:13px;margin:10px 0}
+.rt-config-edit-panel .areaedit>.row.between strong{font-size:13px;color:#f2f7f3}
+.rt-config-edit-panel button{min-height:38px}
+.rt-config-edit-panel button:not(.primary):hover{background:#2c4036}
+.rt-config-edit-footer{padding-top:14px}
+.rt-config-edit-footer .primary{background:#5b8b40;color:#fff;border-color:#8ed269}
+@media(max-width:650px){
+ .rt-config-hero{padding:13px}.rt-config-hero h2{font-size:24px}
+ .rt-config-heading{flex-wrap:wrap}.rt-config-heading h3{font-size:17px}
+ .rt-config-row{flex-wrap:wrap;padding:12px 10px;gap:10px}
+ .rt-library-course .rt-config-row-main{flex-basis:100%}
+ .rt-config-row-actions{width:100%}.rt-config-row-actions button{flex:1}
+ .rt-config-weapon-icon{width:35px;height:35px;flex-basis:35px}
+ .rt-config-backup-actions{grid-template-columns:1fr}
+ .rt-config-edit-panel .grid{grid-template-columns:minmax(0,1fr)}
+ .rt-config-edit-panel .areaedit{padding:10px}
+}
+@media print{.rt-config-view{display:none!important}}
